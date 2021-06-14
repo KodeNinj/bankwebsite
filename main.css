@@ -456,6 +456,27 @@ footer .col4 {
     width: 150%;
   }
 }
+@media only screen and (max-width: 360px) {
+  #mock {
+    top: -83%;
+  }
+  .firstPage .left h1 {
+    top: 40%;
+  }
+  .firstPage p {
+    font-size: 18px;
+    top: 54%;
+  }
+  .firstPage {
+    height: 82vh;
+  }
+  .left button {
+    top: 82%;
+  }
+  .col1 {
+    margin-bottom: 30px;
+  }
+}
 @media only screen and (max-width: 325px) {
   .firstPage .left h1 {
     font-size: 30px;
