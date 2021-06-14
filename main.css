@@ -6,6 +6,7 @@ body {
   box-sizing: border-box;
   overflow-x: hidden;
   background: hsl(0, 0%, 98%);
+  user-select: none;
 }
 #hamb {
   width: 40px;
