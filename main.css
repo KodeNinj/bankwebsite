@@ -1,6 +1,7 @@
 body {
   padding: 0;
   min-width: 100%;
+  max-width: 100%;
   margin: 0;
   box-sizing: border-box;
   overflow-x: hidden;
@@ -94,6 +95,11 @@ nav p:hover {
   width: 70%;
   left: 45%;
 }
+.right #mobile {
+  width: calc(100%);
+  position: relative;
+  display: none;
+}
 .left button {
   padding: 15px 45px;
   font-size: 18px;
@@ -131,6 +137,7 @@ nav p:hover {
 .secondpage .bottom .itemList {
   width: 20%;
   flex-wrap: wrap;
+  transition: transform 1s ease-in;
 }
 .secondpage .bottom .itemList h4 {
   font-size: 20px;
@@ -140,6 +147,13 @@ nav p:hover {
   line-height: 30px;
   font-size: 18px;
   font-family: sans-serif;
+}
+.itemList:hover,
+.itemlist:hover {
+  transform: translateY(-10px);
+  cursor: pointer;
+  transition: transform 1s;
+  border-bottom: 1px ridge grey;
 }
 /**third page start here**/
 .thirdpage {
@@ -162,6 +176,9 @@ nav p:hover {
 .thirdpage .bottom .itemlist {
   width: 23%;
   background: #fff;
+}
+.itemlist {
+  transition: transform 1s;
 }
 .thirdpage .bottom img {
   width: 100%;
@@ -257,7 +274,7 @@ footer .col4 {
   color: hsl(0, 0%, 98%);
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 850px) {
   body {
     overflow-x: hidden;
   }
@@ -392,10 +409,13 @@ footer .col4 {
     left: 2%;
   }
 }
+@media only screen and (max-width: 515px) {
+}
 @media only screen and (max-width: 430px) {
   .firstPage .left h1 {
     font-size: 35px;
   }
+
   #hamb {
     margin-right: 20px;
   }
@@ -409,26 +429,54 @@ footer .col4 {
 @media only screen and (max-width: 380px) {
   .firstPage .left h1 {
     font-size: 34px;
+    top: 49%;
+  }
+  .firstPage {
+    height: 100vh;
   }
   .firstPage p {
     font-size: 14px;
+    top: 64%;
   }
   .left button {
     left: 25%;
+    top: 92%;
   }
   .col4 {
     left: -19%;
+  }
+  #bgbg {
+    width: 300%;
+    display: none;
+    top: -25%;
+  }
+  #mock {
+    top: -59%;
+    left: -20%;
+    width: 150%;
   }
 }
 @media only screen and (max-width: 325px) {
   .firstPage .left h1 {
     font-size: 30px;
+    top: 40%;
   }
+  .firstPage {
+    height: 90vh;
+  }
+
   .firstPage p {
-    top: 70%;
+    top: 55%;
   }
   .left button {
-    left: 20%;
+    left: 15%;
+    top: 80%;
+  }
+  #bgbg {
+    top: -35%;
+  }
+  #mock {
+    top: -69%;
   }
   .secondpage .top h3 {
     font-size: 25px;
@@ -443,8 +491,12 @@ footer .col4 {
   .thirdpage h3 {
     font-size: 25px;
   }
+  footer .col3 {
+    margin-right: 90px;
+    margin-top: 10px;
+  }
   .col4 {
-    left: -30%;
+    left: -35%;
   }
 }
 @media only screen and (max-width: 300px) {
